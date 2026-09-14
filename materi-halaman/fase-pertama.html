@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Learn | Fase 1: Pemrograman Dasar</title>
+    <link rel="stylesheet" href="../css/isi-materi.css">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <a href="../materi.html" class="nav-brand">C-Learn</a>
+
+        <div class="chapter-menu">
+            <a href="#chapter-01" class="menu-pill active">Bab 01</a>
+            <a href="#chapter-02" class="menu-pill">Bab 02</a>
+            <a href="#chapter-03" class="menu-pill">Bab 03</a>
+            <a href="#chapter-04" class="menu-pill">Bab 04</a>
+        </div>
+
+        <div class="btn-nav-group">
+            <a href="../materi.html" class="btn-nav-action btn-back">← Kembali</a>
+            <a href="../quiz.html" class="btn-nav-action btn-quiz">📝 Kuis</a>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header class="fase-header">
+        <span class="fase-badge">• FASE 1 • </span>
+        <h1>Programming Foundation</h1>
+        <p>Belajar logika, alur flowchart & pseudocode, konsep pemrograman, hingga bahasa C dari Modul Terpercaya.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <!-- bab 1 -->
+        <section id="chapter-01" class="chapter-block ch-1">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 01 </span>
+                    <h2>Pemahaman Dasar Logika & Algoritma</h2>
+                </div>
+                <div class="chapter-number-big">01</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🎯 Mission Brief</h3>
+                <p>
+                    Sebelum membuat program, programmer harus paham cara berpikir logis dan sistematis. Algoritma adalah
+                    dasar pemecahan masalah sebelum ditulis ke kode program.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>🧠 A. Pengertian Logika dan Algoritma</h3>
+                <p>Logika dan algoritma adalah dua hal yang tidak bisa dipisahkan:</p>
+
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>💡 Logika</h4>
+                        <p>Upaya berpikir secara cermat, tepat, dan logis (dapat diterima oleh akal sehat).</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>⚙️ Algoritma</h4>
+                        <p>Langkah-langkah yang terstruktur dan logis untuk memecahkan suatu masalah.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>📜 B. Sejarah Algoritma & Penemuan Angka 0</h3>
+                <p>
+                    Kata <em>algoritma</em> berasal dari nama ilmuwan Persia: <strong>Abu Ja’far Muhammad bin Musa
+                        Al-Khwarizmi</strong> yang menulis buku <em>Al-Jabr wal-Muqabalah</em> pada tahun 825 M di era
+                    Khilafah Abbasiyah (Baitul Hikmah).
+                </p>
+                <div class="info-box">
+                    <h4>🏛️ Tokoh Utama: Al-Khwarizmi</h4>
+                    <p>
+                        Beliau dikenal sebagai <strong>Bapak Algoritma</strong> dan penemu <strong>Aljabar</strong>.
+                        Salah satu kontribusi utamanya adalah memperkenalkan <strong>angka 0 (nol)</strong> yang menjadi
+                        dasar kode biner (0 dan 1) komputer modern serta Aljabar Boolean (George Boole).
+                    </p>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>💡 C. Contoh Algoritma Logis vs Tidak Logis</h3>
+                <p>Berikut adalah perbandingan contoh algoritma segelas kopi:</p>
+
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>✅ Algoritma Logis (Benar)</h4>
+                        <ol class="content-list">
+                            <li>Siapkan gelas, sendok, kopi, gula, air panas.</li>
+                            <li>Masukkan kopi, gula, air panas ke gelas.</li>
+                            <li>Aduk dengan sendok sampai rata.</li>
+                            <li>Kopi siap diminum.</li>
+                        </ol>
+                    </div>
+                    <div class="card-box danger">
+                        <h4>❌ Contoh Algoritma Salah</h4>
+                        <ol class="content-list">
+                            <li>Aduk dengan sendok sampai rata.</li>
+                            <li>Kopi siap diminum.</li>
+                        </ol>
+                        <p class="note-text">(Tidak logis karena bahan dan gelas tidak ada)</p>
+                    </div>
+                </div>
+
+                <div class="info-box info-box-spaced">
+                    <h4>💻 Contoh Algoritma Komputer: Menghitung Luas Lingkaran</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <span>Komputer menetapkan <code>pi = 3.14</code> (tetap).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <span>Komputer menyiapkan variabel <code>jari_jari</code> dan <code>luas</code>.</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <span>Komputer meminta user memasukkan nilai <code>jari_jari</code> (Input).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <span>Hitung: <code>luas = pi × jari_jari × jari_jari</code> (Proses).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <span>Tampilkan hasil <code>luas</code> ke pengguna (Output).</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 4 -->
+            <article class="material-card">
+                <h3>⚙️ D. 5 Kriteria Algoritma yang Baik (Donald E. Knuth)</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span><strong>Memiliki Input:</strong> Minimal ada 1 masukan
+                            data.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span><strong>Memiliki Output:</strong> Minimal ada 1 hasil
+                            keluaran.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span><strong>Finite (Terbatas):</strong> Memiliki batas akhir
+                            proses (tidak berulang selamanya).</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div><span><strong>Definite (Pasti):</strong> Langkah dan tujuan
+                            jelas tanpa keraguan.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div><span><strong>Efektif & Efisien:</strong> Hemat memori dan tidak
+                            melakukan hal sia-sia.</span>
+                    </div>
+                </div>
+            </article>
+
+
+        </section>
+
+        <!-- pemisah bab 1 ke bab 2 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">🏆 Checkpoint 1: Bab 01 Selesai!</span>
+        </div>
+
+        <!-- bab 2 -->
+        <section id="chapter-02" class="chapter-block ch-2">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 02  </span>
+                    <h2>Flowchart dan Pseudocode</h2>
+                </div>
+                <div class="chapter-number-big">02</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🔀 Mission Brief</h3>
+                <p>
+                    Flowchart dan pseudocode berfungsi sebagai alat komunikasi antara programmer dengan non-programmer
+                    agar rancangan alur dapat dipahami bersama sebelum koding.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>📐 A. Pengertian Flowchart</h3>
+                <p>
+                    <strong>Flowchart (Diagram Alir)</strong> adalah gambaran visual dari algoritma yang menggunakan
+                    simbol-simbol standar untuk menunjukkan alur proses program.
+                </p>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>🔷 B. Simbol-Simbol Utama Flowchart</h3>
+                <div class="simbol">
+                    <img src="../assets/flowchartsimbol.jpeg" alt="">
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>📜 C. Ketentuan Pembuatan Flowchart</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span>Harus memiliki Judul.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span>Tidak Boleh Menggantung: Semua simbol wajib saling
+                            terhubung.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span>Posisi Start di tengah paling atas, End di paling
+                            bawah.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div><span>Decision memiliki 2 jalur panah: <code>True</code> dan
+                            <code>False</code>.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 4 -->
+            <article class="material-card">
+                <h3>📝 D. Pengertian & Contoh Pseudocode</h3>
+                <p>
+                    <strong>Pseudocode</strong> adalah penulisan algoritma yang menyerupai kode program namun
+                    menggunakan bahasa yang mudah dipahami manusia. Tanda <code>←</code> artinya menetapkan nilai.
+                </p>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Pseudocode: Menghitung Luas Lingkaran</span>
+                    </div>
+                    <pre><code>1. pi ← 3.14
+2. INPUT jari_jari
+3. luas ← pi × jari_jari × jari_jari
+4. OUTPUT luas</code></pre>
+                </div>
+            </article>
+
+
+        </section>
+
+
+        <div class="chapter-divider">
+            <span class="divider-badge">🎯 Checkpoint 2: Bab 02 Selesai!</span>
+        </div>
+
+        <!-- Bab 3 -->
+        <section id="chapter-03" class="chapter-block ch-3">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 03 </span>
+                    <h2>Pemrograman (Programming)</h2>
+                </div>
+                <div class="chapter-number-big">03</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>💻 Mission Brief</h3>
+                <p>
+                    Pemrograman adalah proses merancang dan membangun program komputer. Orang yang membuat program
+                    dinamakan <strong>Programmer</strong>.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>🚀 A. Mengapa Harus Belajar Pemrograman?</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span>Meningkatkan cara berpikir, kreativitas, dan problem
+                            solving.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span>Peluang kerja dan karier sangat tinggi.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span>Sarana berdakwah dan membangun sains/teknologi.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div><span>Memudahkan urusan umat dengan aplikasi bermanfaat.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div><span>Fleksibilitas kerja remote (bisa kerja dari mana
+                            saja).</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>🌐 B. Bahasa Pemrograman & Tingkatannya</h3>
+                <p>Bahasa pemrograman dibagi menjadi 3 tingkatan:</p>
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>1. Low-Level</h4>
+                        <p>Bahasa mesin (0 dan 1) yang dimengerti langsung oleh hardware.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>2. Mid-Level</h4>
+                        <p><strong>Bahasa C</strong>: Punya akses cepat ke mesin & sintaks terstruktur.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>3. High-Level</h4>
+                        <p>Python, Java, JS: Sintaks sangat mirip bahasa manusia (Inggris).</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>⚡ C. Alur Pemrosesan Komputer</h3>
+                <p>Alur utama komputer: <strong>Input ➔ Proses ➔ Output</strong></p>
+                <div class="info-box">
+                    <h4>Simbol Operator Matematika:</h4>
+                    <p><code>*</code> untuk perkalian (×), <code>/</code> untuk pembagian (÷), dan <code>.</code> untuk
+                        titik desimal.</p>
+                </div>
+            </article>
+
+            <!-- Materi 4 -->
+            <article class="material-card">
+                <h3>🏗️ D. 3 Struktur Dasar Pemrograman</h3>
+                <div class="grid-2-col">
+                    <div class="card-box">
+                        <h4>1. Sequence (Runtutan)</h4>
+                        <p>Perintah dijalankan urut baris demi baris dari atas ke bawah.</p>
+                    </div>
+                    <div class="card-box">
+                        <h4>2. Selection (Percabangan)</h4>
+                        <p>Pemilihan perintah berdasarkan syarat kondisi (if-else).</p>
+                    </div>
+                    <div class="card-box">
+                        <h4>3. Loop (Perulangan)</h4>
+                        <p>Menjalankan perintah berulang kali sampai batas tertentu.</p>
+                    </div>
+                </div>
+            </article>
+
+
+        </section>
+
+        <!-- Pemisah Bab 3 ke Bab 4 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">💻 Checkpoint 3: Bab 03 Selesai!</span>
+        </div>
+
+        <!-- ==========================================================================
+             BAB 4: KONSEP DASAR PEMROGRAMAN BAHASA C
+             ========================================================================== -->
+        <section id="chapter-04" class="chapter-block ch-4">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 04 </span>
+                    <h2>Konsep Dasar Pemrograman Bahasa C</h2>
+                </div>
+                <div class="chapter-number-big">04</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🚀 Mission Brief</h3>
+                <p>
+                    Bahasa C diciptakan oleh <strong>Dennis Ritchie</strong> tahun 1972 di Bell Labs. Bahasa C adalah
+                    induk dari berbagai bahasa populer modern!
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>⚡ A. Fitur-Fitur Utama Bahasa C</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span><strong>Prosedural:</strong> Kode dijalankan urut dari
+                            paling atas ke paling bawah.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span><strong>Tingkat Menengah:</strong> Memiliki kecepatan
+                            manipulasi hardware mesin.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span><strong>Cepat & Efisien:</strong> Berjalan langsung tanpa
+                            interpreter.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div><span><strong>Portable:</strong> Bisa dijalankan di Windows,
+                            Linux, dan macOS.</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div><span><strong>Induk Bahasa Modern:</strong> Menginspirasi C++,
+                            C#, Java, PHP, JS.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+             <article class="material-card">
+            <h3>🛠️ B. Compiler MinGW & Visual Studio Code</h3>
+            <p><strong>Compiler</strong> bertugas menerjemahkan kode Bahasa C menjadi file <code>.exe</code>. Pada Windows digunakan <strong>MinGW GCC</strong>.</p>
+            <div class="info-box">
+                <h4>📌 Langkah Singkat Setup Compiler:</h4>
+                <ol class="content-list">
+                    <li>Download <code>mingw-get-setup.exe</code> lalu install ke <code>C:\MinGW\</code>.</li>
+                    <li>Centang paket <code>mingw32-base-bin</code> dan <code>mingw32-gcc-g++-bin</code> ➔ Apply Changes.</li>
+                    <li>Atur <strong>Environment Variables Path</strong> ke <code>C:\MinGW\bin\</code>.</li>
+                    <li>Cek di Command Prompt: <code>gcc --version</code>.</li>
+                </ol>
+            </div>
+        </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>🏛️ C. Anatomi Program Bahasa C Pertama</h3>
+                <p>Berikut adalah struktur sederhana program C Hello World:</p>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>main.c</span>
+                    </div>
+                    <pre><code><span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">int</span> <span class="func">main</span>() {
+    <span class="comment">// Mencetak teks ke layar</span>
+    <span class="func">printf</span>(<span class="string">"Hello World!\n"</span>);
+    
+    <span class="keyword">return</span> 0;
+}</code></pre>
+                </div>
+
+                <div class="info-box">
+                    <h4>🔍 Penjelasan Komponen Penting:</h4>
+                    <ul>
+                        <li><code>#include &lt;stdio.h&gt;</code>: Memanggil library standar input/output agar fungsi
+                            <code>printf</code> bisa dipakai.
+                        </li>
+                        <li><code>int main() { ... }</code>: Fungsi utama tempat kode dijalankan pertama kali.</li>
+                        <li><code>printf("...");</code>: Perintah untuk menampilkan tulisan ke layar.</li>
+                        <li><code>; (Titik Koma)</code>: Penanda akhir dari setiap pernyataan (statement). Wajib ada!
+                        </li>
+                        <li><code>// Komentar</code>: Catatan keterangan yang tidak akan dijalankan oleh komputer.</li>
+                        <li><code>return 0;</code>: Penanda bahwa fungsi main selesai tanpa error.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- banner Selesai -->
+        <section class="complete-box">
+            <h2>🎉 Selamat! Fase 1 Selesai!</h2>
+            <p>Kamu sudah mempelajari materi Bab 1 sampai Bab 4 secara lengkap dan terstruktur.</p>
+
+            <div class="complete-btns">
+                <a href="../quiz.html" class="btn-complete quiz">📝 Ikuti Kuis</a>
+                <a href="../materi.html" class="btn-complete back">📚 Kembali ke Daftar Bab</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 silva PUB's 24. Learn C Programming.</p>
+    </footer>
+</body>
+
+</html>

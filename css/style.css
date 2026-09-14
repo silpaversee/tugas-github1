@@ -1,0 +1,649 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(160deg, #f7fbff 0%, #e8f6fc 45%, #eef8ff 100%);
+  background-attachment: fixed;
+  color: #31465a;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#progress-dashboard {
+  display: none;
+}
+
+/* Isi Konten Utama */
+.main-content {
+  margin-left: 220px;
+  padding: 40px 48px;
+  max-width: 1250px;
+  min-height: 85vh;
+}
+
+/* hero section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75vh;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  color: #64788a;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Primary Button */
+.primary-button {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ffb38a, #f8d66d);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(255, 179, 138, 0.4);
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #f29a6d, #f0c45a);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(242, 154, 109, 0.45);
+}
+
+/* Hero Image */
+
+.hero-image-container img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 20px;
+  animation: gerak 5s ease-in-out infinite;
+}
+
+@keyframes gerak {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 35px) rotateX(0deg) rotateY(0deg)
+      rotateZ(0deg) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+      scale(1);
+  }
+}
+
+.hero-image-container::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background: linear-gradient(135deg, #70b7d9, #40b5dc, #ffb38a);
+  border-radius: 20px;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.hero-image {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(112, 183, 217, 0.25);
+  object-fit: cover;
+}
+
+/* form user */
+.user-section {
+  background: linear-gradient(145deg, #ffffff, #eef8ff);
+  padding: 35px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(64, 181, 220, 0.45);
+  box-shadow: 0 15px 40px rgba(112, 183, 217, 0.15);
+}
+
+.user-section p {
+  color: #64788a;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #31465a;
+  letter-spacing: -0.3px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  /* max-width: 900px; */
+}
+
+.username-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #a2e3f4;
+  background: #f7fbff;
+  color: #31465a;
+  outline: none;
+  font-size: 15px;
+}
+
+.user-form label {
+  color: #31465a;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* .username-input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #a2e3f4;
+  background: #f7fbff;
+  color: #31465a;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+} */
+
+.username-input::placeholder {
+  color: #8a9aa8;
+}
+
+.username-input:focus {
+  border-color: #70b7d9;
+  box-shadow: 0 0 0 4px rgba(112, 183, 217, 0.2);
+  background: #ffffff;
+}
+
+.submit-button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #70b7d9, #40b5dc);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(112, 183, 217, 0.4);
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #579fbe, #2586bd);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(87, 159, 190, 0.45);
+}
+
+/* progress dashboardnya */
+.section-desc {
+  color: #64788a;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Header baris: sapaan + tombol ganti user */
+.pd-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* sapaan */
+.pd-greet {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e3a50;
+  margin-bottom: 4px;
+}
+
+.pd-subtitle {
+  font-size: 14px;
+  color: #64788a;
+}
+
+/* tombol ganti user */
+.pd-change-btn {
+  padding: 8px 16px;
+  border: 1px solid #c8dde9;
+  border-radius: 8px;
+  background: #f0f9ff;
+  color: #0369a1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pd-change-btn:hover {
+  background: #e0f2fe;
+  border-color: #70b7d9;
+  transform: translateY(-1px);
+}
+
+/* container tombol */
+.pd-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* tombol reset progress */
+.pd-reset-btn {
+  padding: 8px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pd-reset-btn:hover {
+  background: #ffe4e6;
+  border-color: #fda4af;
+  transform: translateY(-1px);
+}
+
+/* card keterangan  */
+.pd-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+/* card masing2 keterangan proses */
+.pd-stat-card {
+  background: #ffffff;
+  border: 1px solid #e4eff6;
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: box-shadow 0.2s ease;
+}
+
+.pd-stat-card:hover {
+  box-shadow: 0 6px 20px rgba(49, 70, 90, 0.08);
+}
+
+/* isi dalam card */
+.pd-stat-value {
+  font-size: 26px;
+  font-weight: 900;
+  color: #1e3a50;
+  line-height: 1;
+}
+
+.pd-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #31465a;
+}
+
+/* Section title dalam dashboard */
+.pd-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #64788a;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+/* Progress List */
+.pd-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+/* proses per bab dalam 1 row */
+.pd-progress-row {
+  background: #ffffff;
+  border: 1px solid #e4eff6;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+.pd-progress-row:hover {
+  box-shadow: 0 4px 14px rgba(49, 70, 90, 0.07);
+}
+
+/* imfo quiz dikerjakan ex pemula : 2x */
+.pd-progress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* judul bab */
+.pd-chap-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e3a50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pd-level-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pd-level-badge.pemula {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.pd-level-badge.sulit {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+/* Score + bar di kanan */
+
+/* wadah skor nya */
+.pd-score-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+  align-items: flex-end;
+}
+
+.pd-score-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* isi skor */
+.pd-pct {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1e3a50;
+}
+
+.pd-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+/* status kalau mahir */
+.pd-status-badge.mastered {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* status kalau berkembang */
+.pd-status-badge.progress {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+/* status kalau perlu latihan */
+.pd-status-badge.needs-work {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Progress bar */
+.pd-bar-track {
+  width: 140px;
+  height: 6px;
+  background: #e8f0f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* proses bagian isinya, fill nya  */
+.pd-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* skor > 80 */
+.pd-bar-fill.mastered {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+/* skor 60-79 */
+.pd-bar-fill.progress {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+/* skor <60 */
+.pd-bar-fill.needs-work {
+  background: linear-gradient(90deg, #f87171, #fca5a5);
+}
+
+/* button mulai sekarang di form progress */
+.pd-cta-btn {
+  display: inline-block;
+  padding: 11px 24px;
+  background: linear-gradient(90deg, #3b9ed9, #5eb8e0);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(62, 158, 217, 0.3);
+}
+
+.pd-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 158, 217, 0.4);
+}
+
+/* fitur section */
+.feature-section {
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  padding: 28px;
+  border-radius: 20px;
+  color: #31465a;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  right: -30px;
+  top: -30px;
+}
+
+.feature-card:nth-child(1) {
+  background: linear-gradient(135deg, #dbeafe, #bae6fd);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+}
+
+.feature-card:nth-child(1) h3 {
+  color: #0369a1;
+}
+
+.feature-card:nth-child(2) {
+  background: linear-gradient(135deg, #ccfbf1, #a5f3fc);
+  box-shadow: 0 12px 30px rgba(45, 180, 170, 0.2);
+}
+
+.feature-card:nth-child(2) h3 {
+  color: #0e7490;
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(135deg, #fed7aa, #fde68a);
+  box-shadow: 0 12px 30px rgba(255, 179, 138, 0.28);
+}
+
+.feature-card:nth-child(3) h3 {
+  color: #c2410c;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #5a6d7d;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+}
+
+/* footer */
+.footer {
+  margin-left: 220px;
+  text-align: center;
+  padding: 24px;
+  color: #8a9aa8;
+  font-size: 14px;
+  border-top: 1px solid #e0edf4;
+}
+
+/* mobile tablet */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 28px 24px;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    gap: 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-card:nth-child(3) {
+    grid-column: span 2;
+    width: 100%;
+    max-width: 50%;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    width: 280px;
+  }
+
+  .user-section {
+    padding: 24px 18px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card:nth-child(3) {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+}

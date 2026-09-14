@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Learn | Belajar Bahasa C</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigasi.css">
+</head>
+
+
+<body>
+    <!-- Sidebar navigasi utama website -->
+    <aside class="side-bar">
+        <div class="logo-container">
+            <h2 class="logo-title">
+                C-Learn
+            </h2>
+            <p class="logo-description">
+                Learn C Programming
+            </p>
+        </div>
+
+        <!-- Menu navigasi -->
+        <nav class="side-menu">
+            <a href="index.html" class="active-menu">
+                🏠Home
+            </a>
+            <a href="materi.html">
+                📚 Materi
+            </a>
+            <a href="quiz.html">
+                📝Quiz
+            </a>
+            <a href="about.html">
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Konten utama -->
+    <main class="main-content">
+
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Master C Programming
+                    Step by Step
+                </h1>
+                <p class="hero-description">
+
+                    Pelajari dasar pemrograman bahasa C mulai dari
+                    algoritma, struktur program, hingga membuat program
+                    sederhana secara interaktif.
+
+                </p>
+
+                <!-- Anchor menuju halaman materi -->
+                <a href="materi.html" class="primary-button">
+                    Mulai Belajar
+                </a>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/coding.jpg" alt="Ilustrasi belajar pemrograman" class="hero-image">
+            </div>
+        </header>
+
+        <!-- Form username untuk progrees -->
+        <section class="user-section" id="join-form-section">
+            <h2 class="section-title">Join Learning Challenge</h2>
+            <p class="section-desc">Masukkan username-mu agar C-Learn bisa melacak progres belajarmu.</p>
+            <form class="user-form" id="user-form">
+                <input type="text" id="username-input" class="username-input" placeholder="Masukkan username kamu"
+                    minlength="5" maxlength="30" required>
+                <button type="submit" class="submit-button" id="btn-start-learning">Mulai Belajar</button>
+            </form>
+        </section>
+
+
+        <!-- Dashboard progress: tampil setelah username tersimpan -->
+        <section class="user-section" id="progress-dashboard"></section>
+
+
+        <!-- Fitur utama website -->
+        <section class="feature-section">
+            <h2 class="section-title">
+                Learning Features
+            </h2>
+            <div class="feature-grid">
+
+                <!-- Card materi -->
+                <article class="feature-card">
+                    <h3>
+                        Materi Lengkap
+                    </h3>
+                    <p>
+                        Pelajari konsep dasar bahasa C
+                        dari algoritma hingga function.
+                    </p>
+                </article>
+
+                <!-- Card quiz -->
+                <article class="feature-card">
+                    <h3>
+                        Interactive Quiz
+                    </h3>
+                    <p>
+                        Uji kemampuan melalui soal
+                        berdasarkan level kesulitan.
+                    </p>
+                </article>
+
+                <!-- Card leaderboard -->
+                <article class="feature-card">
+                    <h3>
+                        Progress Learning
+                    </h3>
+
+                    <p>
+                       Lihat proses belajar mu dan improve
+                       kemampuan program bahasa c mu!
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 silva PUB's 24. Learn C Programming.
+        </p>
+    </footer>
+
+    <script src="js/progress.js"></script>
+</body>
+
+
+</html>

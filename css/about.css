@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #f0f7ff 0%, #e2f1f8 40%, #edf7ff 100%);
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* content main */
+.main-content {
+  margin-left: 220px;
+  padding: 48px 56px;
+  max-width: 1440px;
+}
+
+/* hero */
+.about-intro {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+/* Label kecil di atas judul utama */
+.about-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffeec2 100%);
+  border: 1px solid rgba(248, 199, 78, 0.5);
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: #925f00;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(248, 199, 78, 0.25);
+}
+
+/* Judul utama halaman About */
+.about-text h1 {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1e293b;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+}
+
+/* Paragraf pengantar halaman */
+.about-lead {
+  color: #64748b;
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+.intro-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* TAMPILAN DASAR SEMUA TOMBOL */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.35s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2a7da3, #1b536e);
+  color: #ffffff;
+  box-shadow: 0 10px 24px -4px rgba(42, 125, 163, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -4px rgba(42, 125, 163, 0.5);
+  background: linear-gradient(135deg, #328eb9, #2a7da3);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #1b536e;
+  border: 2px solid rgba(42, 125, 163, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  background: #f8fafc;
+  border-color: #2a7da3;
+  box-shadow: 0 10px 24px rgba(42, 125, 163, 0.15);
+}
+
+.btn-large {
+  padding: 16px 36px;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+/* intro */
+
+/* container info singkat c-learn */
+.intro-highlights {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* card kecil info fitur */
+.highlight-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 12px 18px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(42, 125, 163, 0.08);
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight-chip:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(42, 125, 163, 0.16);
+  border-color: rgba(42, 125, 163, 0.3);
+}
+
+/* ukuran ikonnya */
+.chip-icon {
+  font-size: 24px;
+}
+
+.chip-info strong {
+  display: block;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.chip-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+
+/* gambar atas */
+.hero-visual img,
+.terminal-container img {
+  height: 200px;
+  width: 500px;
+  object-fit: cover;
+}
+
+/* kard stats  */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+/* tampilan setiap kartu stat */
+.stat-card {
+  background: rgba(55, 208, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(13, 40, 75, 0.9);
+  padding: 30px 20px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow:
+    0 16px 36px -8px rgba(42, 125, 163, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: 0.35s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 48px -10px rgba(42, 125, 163, 0.22),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+  border-color: rgba(42, 125, 163, 0.4);
+}
+
+/* angka stat */
+.stat-number {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+/* keterangan stat */
+.stat-label {
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* stroty mission proses */
+.about-story {
+  margin-bottom: 80px;
+}
+
+/* judul setiap section */
+.section-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* teks kecil di atas sectinya */
+.section-kicker {
+  color: #2a7da3;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+/* container 3 kartu cerita */
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+/* kartu cerita */
+.story-item {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 36px 28px;
+  border-radius: 24px;
+  box-shadow:
+    0 16px 36px -8px rgba(42, 125, 163, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.story-item:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px -10px rgba(42, 125, 163, 0.22),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+  border-color: rgba(42, 125, 163, 0.4);
+}
+
+.story-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background: linear-gradient(135deg, #eaf7fc, #cbebfa);
+  box-shadow: 0 8px 18px rgba(42, 125, 163, 0.15);
+}
+
+.story-item:nth-child(2) .story-icon {
+  background: linear-gradient(135deg, #e8fadf, #c3f3b4);
+}
+
+.story-item:nth-child(3) .story-icon {
+  background: linear-gradient(135deg, #fff3d6, #ffe299);
+}
+
+/* label kategori kartu cerita */
+.story-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2a7da3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.story-content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+/* isi penjelsan kartu cerita */
+.story-content p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* TAHAPAN LEARNING */
+.learning-process {
+  margin-bottom: 90px;
+}
+
+/* container kartu tahapan */
+.process-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Tampilan setiap kartu proses belajar */
+.process-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 36px 24px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow:
+    0 16px 36px -8px rgba(42, 125, 163, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px -10px rgba(42, 125, 163, 0.22),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+  border-color: rgba(42, 125, 163, 0.4);
+}
+
+/* nomor kecil kartu proses */
+.process-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(42, 125, 163, 0.4);
+}
+
+.process-icon {
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.process-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.process-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* panah penghubung tahapan */
+.process-arrow {
+  font-size: 28px;
+  color: #62bcdb;
+  font-weight: bold;
+}
+
+/* bagian ajakan mulai belajar */
+.closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  background: linear-gradient(135deg, #2a7da3 0%, #1e5a77 60%, #174258 100%);
+  padding: 56px;
+  border-radius: 36px;
+  color: #ffffff;
+  box-shadow: 0 20px 48px rgba(42, 125, 163, 0.35);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* label kecil bagian closing */
+.closing-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8c74e;
+  margin-bottom: 16px;
+}
+
+.closing h2 {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.closing p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.closing-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* footer */
+.footer {
+  margin-left: 270px;
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  font-size: 14px;
+  border-top: 1px solid rgba(42, 125, 163, 0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 35px 30px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 35px;
+    min-height: auto;
+  }
+
+  .about-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro-actions {
+    justify-content: center;
+  }
+
+  .intro-highlights {
+    justify-content: center;
+  }
+
+  .hero-visual img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .timeline-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .process-container {
+    flex-direction: column;
+  }
+
+  .process-card {
+    width: 100%;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .closing {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 45px 35px;
+  }
+
+  .closing-actions {
+    justify-content: center;
+  }
+
+  .terminal-container img {
+    width: 80%;
+    height: auto;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 25px 18px;
+  }
+
+  .about-text h1 {
+    font-size: 40px;
+  }
+
+  .about-lead {
+    font-size: 16px;
+  }
+
+  .intro-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .intro-highlights {
+    flex-direction: column;
+  }
+
+  .highlight-chip {
+    width: 100%;
+  }
+
+  .hero-visual img {
+    width: 100%;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .story-item {
+    padding: 28px 22px;
+  }
+
+  .closing {
+    padding: 35px 20px;
+    border-radius: 25px;
+  }
+
+  .closing h2 {
+    font-size: 30px;
+  }
+
+  .closing p {
+    font-size: 15px;
+  }
+
+  .terminal-container img {
+    width: 100%;
+  }
+}

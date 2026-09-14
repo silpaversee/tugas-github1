@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Learn | Belajar Bahasa C</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/navigasi.css">
+</head>
+
+
+<body>
+    <aside class="side-bar">
+        <div class="logo-container">
+
+            <h2 class="logo-title">
+                C-Learn
+            </h2>
+
+            <p class="logo-description">
+                Learn C Programming
+            </p>
+
+        </div>
+
+
+        <nav class="side-menu">
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+            <a href="materi.html">
+                📚 Materi
+            </a>
+
+            <a href="quiz.html" class="active-menu">
+                📝 Quiz
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+        </nav>
+    </aside>
+
+    <!-- main content -->
+    <main class="main-content" id="quiz-app">
+        <div id="quiz-menu">
+
+            <!-- HERO SECTION -->
+            <section class="quiz-hero">
+                <span class="hero-badge">
+                    UJI PEMAHAMAN
+                </span>
+
+                <h1 class="hero-title"> Evaluasi <span class="highlight-text"> Pemrograman C</span></h1>
+
+                <p class="hero-description">
+                    Pilih bab dan tingkat kesulitan di bawah ini
+                    untuk memulai evaluasi mandiri pemahaman
+                    materi Bahasa C Anda.
+                </p>
+
+                <!-- statistic quiz -->
+                <div class="quiz-stats-row">
+                    <!-- JUMLAH CHAPTER -->
+                    <div class="stat-badge">
+                        <span class="stat-badge-label">
+                            Tersedia
+                        </span>
+                        <span class="stat-badge-value" id="chapter-count">
+                            - Chapter
+                        </span>
+
+                    </div>
+
+                    <!-- TINGKAT -->
+                    <div class="stat-badge">
+                        <span class="stat-badge-label">
+                            Tingkat
+                        </span>
+                        <span class="stat-badge-value">
+                            Pemula & Sulit
+                        </span>
+                    </div>
+
+                    <!-- MODE -->
+                    <div class="stat-badge">
+                        <span class="stat-badge-label">
+                            Mode
+                        </span>
+                        <span class="stat-badge-value">
+                            Evaluasi Langsung
+                        </span>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOADING STATE -->
+            <div class="loading-card" id="quiz-loading" hidden>
+
+                <div class="spinner"></div>
+
+                <h3 class="loading-title">
+                    Memuat Kuis
+                </h3>
+
+                <p class="loading-desc">
+                    Menyiapkan daftar chapter kuis C-Learn...
+                </p>
+            </div>
+
+            <!-- ERROR STATE -->
+            <div class="error-card" id="quiz-error" hidden>
+                <h3 class="error-title">
+                    Gagal Memuat Kuis
+                </h3>
+
+                <p class="error-desc" id="quiz-error-message">
+                    Terjadi kesalahan saat memuat data.
+                </p>
+
+                <button class="retry-btn" id="retry-quiz-btn" type="button">
+                    Coba Lagi
+                </button>
+            </div>
+
+            <!-- daftar chapter -->
+            <section class="chapters-section" id="chapters-section">
+                <h2 class="section-heading">
+                    Daftar Chapter
+                </h2>
+
+                <!-- dibuat pake DOM -->
+                <div class="chapter-grid" id="chapter-grid"></div>
+            </section>
+        </div>
+        <!-- tempat si quiz -->
+        <div id="quiz-dynamic-screen" hidden></div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p> &copy; 2026 silva PUB's 24. Learn C Programming.</p>
+    </footer>
+    
+    <script src="js/quiz.js"></script>
+</body>
+</html>

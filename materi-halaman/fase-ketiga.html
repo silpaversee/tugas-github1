@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Learn | Fase 3: Programming Logic</title>
+    <link rel="stylesheet" href="../css/isi-materi.css">
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav class="top-nav">
+        <a href="../materi.html" class="nav-brand">C-Learn</a>
+
+        <div class="chapter-menu">
+            <a href="#chapter-09" class="menu-pill active">Bab 09</a>
+            <a href="#chapter-10" class="menu-pill">Bab 10</a>
+            <a href="#chapter-11" class="menu-pill">Bab 11</a>
+            <a href="#chapter-12" class="menu-pill">Bab 12</a>
+        </div>
+
+        <div class="btn-nav-group">
+            <a href="../materi.html" class="btn-nav-action btn-back">← Kembali</a>
+            <a href="../quiz.html" class="btn-nav-action btn-quiz">📝 Kuis</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="fase-header">
+        <span class="fase-badge">• FASE 3</span>
+        <h1>Programming Logic</h1>
+        <p>Menguasai perulangan (looping), perintah pelompatan (jump statement), manipulasi data array, serta struktur
+            fungsi dan prosedur</p>
+    </header>
+
+    <main class="container">
+
+        <!-- bab 9 -->
+        <section id="chapter-09" class="chapter-block ch-9">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 09 </span>
+                    <h2>Perulangan (Looping)</h2>
+                </div>
+                <div class="chapter-number-big">09</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>↻ Mission Brief</h3>
+                <p>
+                    Perulangan (looping) adalah perintah dalam Bahasa C yang digunakan untuk mengeksekusi instruksi
+                    tertentu secara berulang-ulang berdasarkan syarat kondisi tertentu.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>🏗️ A. 3 Bagian Dasar Perulangan</h3>
+                <p>Setiap struktur perulangan wajib memiliki 3 komponen utama berikut:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span><strong>Initialization (Inisialisasi):</strong> Langkah
+                            awal membuat variabel penghitung (counter), biasanya dari 0 (contoh:
+                            <code>int i = 0;</code>).</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span><strong>Condition (Kondisi):</strong> Batas nilai agar
+                            perulangan berhenti (contoh: <code>i &lt; 10</code>).</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span><strong>Final (Pengubah Nilai):</strong> Perintah
+                            penambah/pengurang nilai variabel (contoh: <code>i++</code> atau <code>i--</code>).</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>🔄 B. Jenis-Jenis Perintah Perulangan</h3>
+
+                <!-- 1. While -->
+                <div class="info-box">
+                    <h4>1. Perulangan while</h4>
+                    <p>Mengevaluasi kondisi terlebih dahulu sebelum mengeksekusi perintah. Wajib ada perintah
+                        <code>final</code> agar tidak terjadi <strong>infinity loop</strong> (perulangan tanpa akhir).
+                    </p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh while Loop</span>
+                        </div>
+                        <pre><code><span class="keyword">int</span> i = 1;
+<span class="keyword">while</span> (i &lt;= 5) {
+    <span class="func">printf</span>(<span class="string">"Perulangan ke-%d\n"</span>, i);
+    i++; <span class="comment">// Final (increment)</span>
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- 2. Do-While -->
+                <div class="info-box">
+                    <h4>2. Perulangan do-while</h4>
+                    <p>Menjalankan perintahnya terlebih dahulu minimal 1 kali, baru memeriksa kondisi di akhir. Wajib
+                        diakhiri titik koma <code>;</code> setelah <code>while(...)</code>.</p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh do-while Loop</span>
+                        </div>
+                        <pre><code><span class="keyword">int</span> s = 0;
+<span class="keyword">do</span> {
+    <span class="func">printf</span>(<span class="string">"Belajar do-while\n"</span>);
+    s++;
+} <span class="keyword">while</span> (s &lt; 5);</code></pre>
+                    </div>
+                </div>
+
+                <!-- 3. For -->
+                <div class="info-box">
+                    <h4>3. Perulangan for</h4>
+                    <p>Penulisan paling ringkas di mana <em>initialization</em>, <em>condition</em>, dan <em>final</em>
+                        ditulis dalam 1 baris.</p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh for Loop</span>
+                        </div>
+                        <pre><code><span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 5; i++) {
+    <span class="func">printf</span>(<span class="string">"Perulangan for ke-%d\n"</span>, i);
+}</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>🪆 C. Perulangan Bersarang (Nested Looping)</h3>
+                <p>Perulangan di dalam perulangan lain. Biasa digunakan untuk membuat pola atau memproses tabel/matriks.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- pemisah bab 9 ke 10 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">🏆 Checkpoint 1: Bab 09 Selesai!</span>
+        </div>
+
+        <!-- bab 10 -->
+        <section id="chapter-10" class="chapter-block ch-10">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 10 </span>
+                    <h2>Perintah Pelompatan (Jump Statement)</h2>
+                </div>
+                <div class="chapter-number-big">10</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>⚡ Mission Brief</h3>
+                <p>
+                    Jump statement digunakan untuk memindahkan, melewati, atau memberhentikan alur perulangan dan
+                    percabangan dalam program.
+                </p>
+            </div>
+
+            <!-- Materi 1-->
+            <article class="material-card">
+                <h3>🏃 A. 5 Jenis Perintah Pelompatan</h3>
+
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>1. break</h4>
+                        <p>Menghentikan perulangan atau switch-case secara langsung dan keluar dari alur loop.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>2. continue</h4>
+                        <p>Melewati/mengabaikan sisa perintah di bawahnya dan langsung melanjutkan ke iterasi perulangan
+                            berikutnya.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>3. goto</h4>
+                        <p>Memindahkan alur eksekusi program secara langsung ke baris kode ber-label yang ditentukan
+                            (<code>goto label;</code>).</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>4. return</h4>
+                        <p>Mengakhiri eksekusi suatu fungsi dan mengembalikan nilai ke bagian program yang memanggilnya.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>5. exit(0)</h4>
+                    <p>Memberhentikan seluruh eksekusi program secara langsung dari titik mana saja. Membutuhkan
+                        <code>#include &lt;stdlib.h&gt;</code>.</p>
+                </div>
+            </article>
+
+
+        </section>
+
+        <!-- pemisah bab 10 ke 11 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">🎯 Checkpoint 2: Bab 10 Selesai!</span>
+        </div>
+
+        <!-- bab 11 -->
+        <section id="chapter-11" class="chapter-block ch-11">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 11 </span>
+                    <h2>Array (Larik)</h2>
+                </div>
+                <div class="chapter-number-big">11</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>📊 Mission Brief</h3>
+                <p>
+                    Array adalah variabel yang dapat menyimpan lebih dari satu data dengan tipe data yang sama dalam
+                    satu nama variabel.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>🔢 A. Struktur & Indeks Array</h3>
+                <p>Sintaks pembuatan Array: <code>tipe_data nama_array[ukuran];</code></p>
+
+                <div class="info-box">
+                    <h4>⚠️ Aturan Indeks Array:</h4>
+                    <p>
+                        Indeks array <strong>selalu dimulai dari 0, bukan 1</strong>. Artinya elemen ke-1 berada di
+                        <code>array[0]</code>, dan elemen terakhir berada di <code>array[ukuran - 1]</code>.
+                    </p>
+                    <p>
+                        Garbage Value: Mengakses nomor indeks yang melebihi ukuran array akan menghasilkan nilai sampah
+                        memori acak!
+                    </p>
+                </div>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Contoh Penggunaan Array</span>
+                    </div>
+                    <pre><code><span class="keyword">int</span> prima[5] = {2, 3, 5, 7, 11};
+<span class="func">printf</span>(<span class="string">"Elemen pertama: %d\n"</span>, prima[0]); <span class="comment">// Output: 2</span></code></pre>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>🍱 B. Array Multidimensi & String</h3>
+                <p>
+                    <strong>Array Multidimensi:</strong> Array yang berisi array lain (Contoh Array 2D:
+                    <code>int matriks[3][4];</code>).
+                </p>
+                <p>
+                    <strong>String:</strong> Sebenarnya adalah array dari karakter (<code>char</code>) yang elemen
+                    akhirnya diakhiri karakter <code>NULL</code> (<code>\0</code>).
+                </p>
+            </article>
+
+
+        </section>
+
+        <!-- pemisah bab 11 ke 12 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">💻 Checkpoint 3: Bab 11 Selesai!</span>
+        </div>
+
+        <!-- bab 12 -->
+        <section id="chapter-12" class="chapter-block ch-12">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 12</span>
+                    <h2>Fungsi (Function)</h2>
+                </div>
+                <div class="chapter-number-big">12</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🧩 Mission Brief</h3>
+                <p>
+                    Fungsi memecah program besar yang rumit menjadi sub-program sederhana agar kode mudah dipelihara,
+                    hemat memori, dan tidak ditulis berulang-ulang (DRY).
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>⚙️ A. Perbedaan Fungsi dan Prosedur</h3>
+
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>Fungsi (Mengembalikan Nilai)</h4>
+                        <p>Memiliki return type (<code>int</code>, <code>float</code>, <code>char</code>) dan
+                            menggunakan perintah <code>return</code> untuk mengirim hasil kembali ke pemanggil.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>Prosedur (Tanpa Nilai Kembalian)</h4>
+                        <p>Memiliki return type <code>void</code> yang artinya kosong, sehingga tidak mengembalikan data
+                            apapun.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>📥 B. Parameter dan Argumen</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span><strong>Parameter:</strong> Variabel penampung dalam
+                            definisi fungsi (Contoh: <code>void tambah(int a, int b)</code>).</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span><strong>Argumen:</strong> Nilai nyata yang dikirim saat
+                            fungsi dipanggil (Contoh: <code>tambah(7, 3);</code>).</span>
+                    </div>
+                </div>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Contoh Fungsi dengan Parameter & Return</span>
+                    </div>
+                    <pre><code><span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">int</span> <span class="func">dapatkan_hasil_kali</span>(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+    <span class="keyword">return</span> a * b; <span class="comment">// Mengembalikan hasil</span>
+}
+
+<span class="keyword">int</span> <span class="func">main</span>() {
+    <span class="keyword">int</span> hasil = <span class="func">dapatkan_hasil_kali</span>(7, 3);
+    <span class="func">printf</span>(<span class="string">"Hasil: %d\n"</span>, hasil);
+    <span class="keyword">return</span> 0;
+}</code></pre>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>📜 C. Function Prototype (Prototipe Fungsi)</h3>
+                <p>
+                    Pernyataan awal tentang nama fungsi, tipe kembalian, dan parameternya di bagian atas sebelum
+                    <code>main</code>, agar compiler mengenali fungsi yang diletakkan di bawah <code>main()</code>.
+                </p>
+            </article>
+
+
+        </section>
+
+        <!-- banner Selesai -->
+        <section class="complete-box">
+            <h2>🎉 Selamat! Fase 3 Selesai!</h2>
+            <p>Kamu telah berhasil mempelajari 4 bab lengkap pada Fase 3 (Bab 09, 10, 11, dan 12).</p>
+
+            <div class="complete-btns">
+                <a href="../quiz.html" class="btn-complete quiz">📝 Ikuti Kuis</a>
+                <a href="../materi.html" class="btn-complete back">📚 Kembali ke Daftar Bab</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 silva PUB's 24. Learn C Programming.</p>
+    </footer>
+</body>
+
+</html>

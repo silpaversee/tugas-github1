@@ -1,0 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* navigasi atas */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  gap: 14px;
+}
+
+/* Logo atau nama C-Learn pada navigasi */
+.nav-brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2c3e50;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-brand span {
+  color: #3498db;
+}
+
+.chapter-menu {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 2px;
+}
+
+/* tombol navigasi bab */
+.menu-pill {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #eef2f7;
+  color: #4a5568;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition:  0.2s ;
+  white-space: nowrap;
+}
+
+.menu-pill:hover {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+/* tombol aksi */
+
+.btn-nav-group {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-nav-action {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-back {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.btn-back:hover {
+  background-color: #cbd5e1;
+}
+
+.btn-quiz {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+
+.btn-quiz:hover {
+  background-color: #d35400;
+}
+
+/* HEADER FASE */
+
+/* penjelasan fase learning */
+.fase-header {
+  max-width: 1000px;
+  margin: 30px auto 20px;
+  padding: 35px 30px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.fase-badge {
+  display: inline-block;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.fase-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.fase-header p {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px 50px;
+}
+
+/* CHAPTER */
+
+/* card chpater */
+.chapter-block {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border-top: 8px solid #cbd5e1;
+}
+
+/* garis atas berbeda tiap bab */
+.ch-1 { border-top-color: #00b4d8; }
+.ch-2 { border-top-color: #6366f1; }
+.ch-3 { border-top-color: #f59e0b; }
+.ch-4 { border-top-color: #10b981; }
+.ch-5 { border-top-color: #3498db; }
+.ch-6 { border-top-color: #9b59b6; }
+.ch-7 { border-top-color: #e67e22; }
+.ch-8 { border-top-color: #2ecc71; }
+.ch-9 { border-top-color: #e74c3c; }
+.ch-10 { border-top-color: #16a085; }
+.ch-11 { border-top-color: #8e44ad; }
+.ch-12 { border-top-color: #f39c12; }
+
+/* header tiap chpater */
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.chapter-title-box h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-top: 5px;
+}
+
+
+/* label chapter */
+.chapter-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* warna bedge tiap chapter */
+.ch-1 .chapter-badge { background-color: #e0f7fa; color: #0077b6; }
+.ch-2 .chapter-badge { background-color: #eef2ff; color: #4338ca; }
+.ch-3 .chapter-badge { background-color: #fef3c7; color: #d97706; }
+.ch-4 .chapter-badge { background-color: #d1fae5; color: #047857; }
+.ch-5 .chapter-badge { background-color: #ebf5fb; color: #2980b9; }
+.ch-6 .chapter-badge { background-color: #f5eef8; color: #8e44ad; }
+.ch-7 .chapter-badge { background-color: #fdf2e9; color: #d35400; }
+.ch-8 .chapter-badge { background-color: #e8f8f5; color: #27ae60; }
+.ch-9 .chapter-badge { background-color: #fadbd8; color: #c0392b; }
+.ch-10 .chapter-badge { background-color: #e8f8f5; color: #117864; }
+.ch-11 .chapter-badge { background-color: #f5eef8; color: #6c3483; }
+.ch-12 .chapter-badge { background-color: #fef9e7; color: #b9770e; }
+
+/* nomor */
+.chapter-number-big {
+  font-size: 42px;
+  font-weight: 900;
+  color: #cbd5e1;
+}
+
+/* tujuan tiap chapter */
+.mission-box {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+/* warna tiap misi */
+.ch-1 .mission-box { background-color: #e0f7fa; border-left: 5px solid #00b4d8; }
+.ch-2 .mission-box { background-color: #eef2ff; border-left: 5px solid #6366f1; }
+.ch-3 .mission-box { background-color: #fef3c7; border-left: 5px solid #f59e0b; }
+.ch-4 .mission-box { background-color: #d1fae5; border-left: 5px solid #10b981; }
+.ch-5 .mission-box { background-color: #ebf5fb; border-left: 5px solid #3498db; }
+.ch-6 .mission-box { background-color: #f5eef8; border-left: 5px solid #9b59b6; }
+.ch-7 .mission-box { background-color: #fdf2e9; border-left: 5px solid #e67e22; }
+.ch-8 .mission-box { background-color: #e8f8f5; border-left: 5px solid #2ecc71; }
+.ch-9 .mission-box { background-color: #fadbd8; border-left: 5px solid #e74c3c; }
+.ch-10 .mission-box { background-color: #e8f8f5; border-left: 5px solid #16a085; }
+.ch-11 .mission-box { background-color: #f5eef8; border-left: 5px solid #8e44ad; }
+.ch-12 .mission-box { background-color: #fef9e7; border-left: 5px solid #f39c12; }
+
+.mission-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* card submateri */
+.material-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+/* judul submateri */
+.material-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.material-card p {
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+
+/* bagi sebagian card jadi 2 */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* contoh */
+.card-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+/* contoh yg benar */
+.card-box.success {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+/* contoh yang salah */
+.card-box.danger {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+}
+
+.card-box h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card-box.success h4 { color: #047857; }
+.card-box.danger h4 { color: #b91c1c; }
+
+/* daftar isi list */
+.content-list {
+  margin-left: 20px;
+  padding-left: 5px;
+}
+
+.content-list li {
+  margin-bottom: 6px;
+}
+
+/* catatan kecil tambahan */
+.note-text {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #64748b;
+}
+
+/* INFO BOX */
+
+/* Kotak informasi tambahan atau penjelasan penting */
+.info-box {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0;
+}
+
+.info-box-spaced {
+  margin-top: 20px;
+}
+
+.info-box h4 {
+  color: #2980b9;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.info-box ul {
+  padding-left: 20px;
+}
+
+.info-box li {
+  margin-bottom: 8px;
+}
+
+/* simbol flowchart */
+.simbol {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.simbol img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* poin materi */
+.step-list {
+  margin-top: 15px;
+}
+
+/* daftar langkah  */
+.step-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* nomor setiap langkah */
+.step-number {
+  background-color: #3498db;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* CODE BOX */
+.code-box {
+  background-color: #0f172a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.code-header {
+  background-color: #1e293b;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.code-box pre {
+  padding: 16px;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-box code {
+  font-family: "Consolas", "Courier New", monospace;
+  color: #f8fafc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-box .keyword { color: #f472b6; font-weight: bold; }
+.code-box .func { color: #38bdf8; font-weight: bold; }
+.code-box .string { color: #34d399; }
+.code-box .comment { color: #64748b; font-style: italic; }
+
+
+/* pemisah antar bab */
+.chapter-divider {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.divider-badge {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #64748b;
+}
+
+
+/* BANNER SELESAI */
+.complete-box {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.complete-box h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #f1c40f;
+}
+
+.complete-box p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.complete-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-complete {
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-complete.quiz { background-color: #f39c12; color: #ffffff; }
+.btn-complete.back { background-color: #3498db; color: #ffffff; }
+
+.btn-complete.quiz:hover { background-color: #d35400; }
+.btn-complete.back:hover { background-color: #2980b9; }
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  font-size: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 868px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .chapter-menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .btn-nav-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-nav-action {
+    flex: 1;
+    text-align: center;
+  }
+
+  .fase-header {
+    margin: 20px 16px;
+    padding: 28px 20px;
+  }
+
+  .fase-header h1 {
+    font-size: 26px;
+  }
+
+  .container {
+    padding: 10px 16px 40px;
+  }
+
+  .chapter-block {
+    padding: 24px 18px;
+  }
+
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .fase-header h1 {
+    font-size: 22px;
+  }
+
+  .chapter-title-box h2 {
+    font-size: 20px;
+  }
+
+  .chapter-number-big {
+    font-size: 28px;
+  }
+
+  .complete-btns {
+    flex-direction: column;
+  }
+
+  .btn-complete {
+    width: 100%;
+    text-align: center;
+  }
+}

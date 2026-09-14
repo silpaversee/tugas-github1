@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Learn | Fase 2: Meet The C Language</title>
+    <link rel="stylesheet" href="../css/isi-materi.css">
+</head>
+
+<body>
+
+    <!-- Navigasi  -->
+    <nav class="top-nav">
+        <a href="../materi.html" class="nav-brand">C-Learn </a>
+
+        <div class="chapter-menu">
+            <a href="#chapter-05" class="menu-pill active">Bab 05</a>
+            <a href="#chapter-06" class="menu-pill">Bab 06</a>
+            <a href="#chapter-07" class="menu-pill">Bab 07</a>
+            <a href="#chapter-08" class="menu-pill">Bab 08</a>
+        </div>
+
+        <div class="btn-nav-group">
+            <a href="../materi.html" class="btn-nav-action btn-back">← Kembali</a>
+            <a href="../quiz.html" class="btn-nav-action btn-quiz">📝 Kuis</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="fase-header">
+        <span class="fase-badge">• FASE 2 • </span>
+        <h1>Meet The C Language</h1>
+        <p>Mengenal struktur program C, preprocessor, tipe data, variabel, operator aritmatika/logika, hingga instruksi
+            percabangan</p>
+    </header>
+
+    <main class="container">
+<!-- materi bab 5 -->
+
+        <section id="chapter-05" class="chapter-block ch-5">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 05 </span>
+                    <h2>Struktur Pemrograman Bahasa C</h2>
+                </div>
+                <div class="chapter-number-big">05</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🚀 Mission Brief</h3>
+                <p>
+                    Saat menulis kode (ngoding) dalam Bahasa C, perintah yang kita buat akan dijalankan secara urut dari
+                    paling atas ke paling bawah (Prosedural). Mari pahami bagian-bagian utamanya!
+                </p>
+            </div>
+
+            <!-- Materi 1-->
+            <article class="material-card">
+                <h3>🛠️ A. Preprocessor Directives</h3>
+                <p>
+                    <strong>Preprocessor</strong> adalah program yang memanipulasi kode sumber sebelum dikompilasi oleh
+                    komputer. Kode dipanggil menggunakan <em>preprocessor directive</em> yang diawali tanda pagar
+                    (<code>#</code>).
+                </p>
+
+                <div class="info-box">
+                    <h4>1. Preprocessor Directive pada Header (#include)</h4>
+                    <p>
+                        Digunakan untuk menyertakan <strong>library</strong> (perpustakaan kode) yang berisi
+                        perintah-perintah bawaan.
+                    </p>
+                    <ul>
+                        <li>Standard Library bawaan C diawali <code>&lt;...&gt;</code>, contoh:
+                            <code>#include &lt;stdio.h&gt;</code>
+                        </li>
+                        <li>Library buatan sendiri diapit tanda petik <code>"..."</code>, contoh:
+                            <code>#include "fungsi_saya.c"</code>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Library Popular -->
+                <div class="info-box">
+                    <h4>📚 Standard Library Populer dalam Bahasa C:</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div><span><code>&lt;stdio.h&gt;</code>: Standard Input Output
+                                (<code>printf</code>, <code>scanf</code>, <code>fgets</code>).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div><span><code>&lt;conio.h&gt;</code>: Console I/O
+                                (<code>getch</code>: baca tanpa tampil teks, <code>getche</code>: baca &amp; tampilkan
+                                teks).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div><span><code>&lt;string.h&gt;</code>: Manipulasi teks
+                                (<code>strcpy</code>, <code>strlen</code>, <code>strupr</code>, <code>strlwr</code>,
+                                <code>strcmp</code>, <code>strcat</code>, <code>strrev</code>).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div><span><code>&lt;stdbool.h&gt;</code>: Pendeklarasian
+                                variabel bertipe boolean (<code>bool</code>).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div><span><code>&lt;stdlib.h&gt;</code>: Konversi data &amp;
+                                kontrol proses (<code>atof</code>, <code>atoi</code>, <code>system("cls")</code>,
+                                <code>system("pause")</code>, <code>exit(0)</code>).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">6</div><span><code>&lt;math.h&gt;</code>: Operasi matematika dasar
+                                &amp; rumit (<code>sqrt</code>, <code>pow</code>, <code>sin</code>, <code>cos</code>,
+                                <code>tan</code>, <code>M_PI</code>).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">7</div><span><code>&lt;windows.h&gt;</code>: Fungsi Windows API
+                                (<code>Sleep(detik)</code>, <code>textcolor()</code>,
+                                <code>backgroundcolor()</code>).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>2. Preprocessor Directive pada Deklarasi Global (#define)</h4>
+                    <p>
+                        Digunakan untuk menggantikan setiap nama variabel tertentu dalam program dengan suatu nilai
+                        konstan sebelum program berjalan.
+                    </p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh #define</span>
+                        </div>
+                        <pre><code><span class="keyword">#define</span> PI 3.14
+<span class="keyword">#define</span> sisi 4</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2-->
+            <article class="material-card">
+                <h3>🏛️ B. Fungsi Main (Program Utama)</h3>
+                <p>
+                    Agar program dapat dijalankan otomatis, fungsi harus bernama <strong>main</strong>. Fungsi
+                    <code>main</code> artinya utama, yang berarti fungsi yang dipanggil dan dijalankan pertama kali.
+                </p>
+
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>void main()</h4>
+                        <p>Fungsi utama yang tidak mengembalikan nilai data apapun setelah selesai berjalan.</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>int main()</h4>
+                        <p>Fungsi utama yang mengembalikan data ber-tipe integer. Biasanya diakhiri dengan
+                            <code>return 0;</code> sebagai tanda sukses.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>💬 C. Comment (Komentar Kode)</h3>
+                <p>
+                    Komentar adalah teks yang diabaikan oleh compiler dan tidak akan dijalankan oleh komputer. Komentar
+                    digunakan sebagai referensi/keterangan catatan programmer.
+                </p>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Contoh Komentar dalam C</span>
+                    </div>
+                    <pre><code><span class="keyword">int</span> <span class="func">main</span>() {
+    <span class="comment">// Ini adalah komentar 1 baris (single-line comment)</span>
+    <span class="func">printf</span>(<span class="string">"Assalamu'alaikum\n"</span>);
+
+    <span class="comment">/* Ini adalah komentar banyak baris
+       (multi-line comment) yang terdiri
+       dari beberapa baris */</span>
+    <span class="keyword">return</span> 0;
+}</code></pre>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Ppemisah bab 5 ke 6 -->
+        <div class="chapter-divider">
+            <span class="divider-badge">🏆 Checkpoint 1: Bab 05 Selesai!</span>
+        </div>
+
+       <!-- bab 6 -->
+        <section id="chapter-06" class="chapter-block ch-6">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 06 </span>
+                    <h2>Tipe Data, Variabel & Input Output</h2>
+                </div>
+                <div class="chapter-number-big">06</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>📦 Mission Brief</h3>
+                <p>
+                    Tipe data adalah pengenal dari suatu variabel. Variabel adalah wadah penyimpanan data dalam memori
+                    komputer. Pembahasan ini juga mencakup escape sequence dan operasi
+                    input-output.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>🏷️ A. Tipe Data & Format Specifier</h3>
+                <p>
+                    <strong>Format specifier</strong> adalah kode ber-awalan persen (<code>%</code>) yang digunakan
+                    untuk membaca atau mencetak isi variabel sesuai tipe datanya.
+                </p>
+
+                <div class="info-box">
+                    <h4>Tabel Tipe Data & Format Specifier Utama:</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">%c</div><span><code>char</code> (1 Byte): Karakter tunggal (Contoh:
+                                'A', '7').</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">%s</div><span><code>char []</code> (String): Sekumpulan karakter
+                                (Contoh: "PUB").</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">%d</div><span><code>int</code> (4 Byte): Bilangan bulat
+                                (-2147483648 s.d. 2147483647).</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">%f</div><span><code>float</code> (4 Byte): Bilangan pecahan presisi
+                                6 desimal.</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">%lf</div><span><code>double</code> (8 Byte): Bilangan pecahan
+                                presisi 15 desimal.</span>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">%d</div><span><code>bool</code> (1 Byte): Menghasilkan 1 (True)
+                                atau 0 (False).</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>📦 B. Variabel dan Konstanta</h3>
+                <p>
+                    <strong>Variabel</strong> adalah wadah penampung data di memori. Data di dalamnya disebut <em>nilai
+                        (value)</em>.
+                </p>
+                <div class="info-box">
+                    <h4>🏢 Analogi Loker </h4>
+                    <p>
+                        Bayangkan loker asrama kalian. Loker = Memori Komputer, Label Loker = Nama Variabel & Tipe Data,
+                        Barang di dalam Loker = Nilai (Value).
+                    </p>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="card-box danger">
+                        <h4>❌ Penamaan Variabel Tidak Valid</h4>
+                        <ul>
+                            <li><code>int 6bilangan;</code> (Diawali angka 6)</li>
+                            <li><code>int total bilangan;</code> (Mengandung spasi)</li>
+                            <li><code>int total-bilangan;</code> (Pakai strip -)</li>
+                        </ul>
+                    </div>
+                    <div class="card-box success">
+                        <h4>✅ Penamaan Variabel Valid & Standar</h4>
+                        <ul>
+                            <li><code>int bilangan;</code></li>
+                            <li><code>int bilangan_1;</code></li>
+                            <li><code>int total_bilangan;</code> (Pakai underscore _)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>3 Operasi Pembuatan & Manipulasi Variabel:</h4>
+                    <ol class="content-list">
+                        <li><strong>Declaration (Deklarasi):</strong> Menyatakan variabel tanpa nilai awal (Contoh:
+                            <code>int bilangan;</code>).
+                        </li>
+                        <li><strong>Initialization (Inisialisasi):</strong> Menyatakan variabel sekaligus nilai awal
+                            (Contoh: <code>int bilangan = 7;</code>).</li>
+                        <li><strong>Assignment (Penugasan):</strong> Mengubah nilai variabel (Contoh:
+                            <code>bilangan = 3;</code> atau <code>bilangan += 2;</code>).
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="info-box">
+                    <h4>🔒 Konstanta (Nilai Tetap):</h4>
+                    <p>Konstanta adalah variabel yang nilainya tetap dan tidak dapat diubah setelah diinisialisasi.</p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh Konstanta</span>
+                        </div>
+                        <pre><code><span class="keyword">const int</span> bilangan = 7;</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>🔤 C. Escape Sequence</h3>
+                <p>
+                    <strong>Escape sequence</strong> adalah urutan karakter yang diawali tanda backslash
+                    (<code>\</code>) untuk menampilkan karakter khusus:
+                </p>
+
+                <div class="grid-2-col">
+                    <div class="card-box">
+                        <p><code>\n</code> : Newline (baris baru)</p>
+                        <p><code>\t</code> : Horizontal tab (tab spasi)</p>
+                        <p><code>\a</code> : Suara peringatan (bip/bell)</p>
+                    </div>
+                    <div class="card-box">
+                        <p><code>\\</code> : Mencetak backslash (\)</p>
+                        <p><code>\'</code> : Mencetak tanda petik tunggal</p>
+                        <p><code>\"</code> : Mencetak tanda petik ganda</p>
+                    </div>
+                </div>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Contoh Escape Sequence</span>
+                    </div>
+                    <pre><code><span class="func">printf</span>(<span class="string">"Baris Pertama\nBaris Kedua"</span>);</code></pre>
+                </div>
+            </article>
+
+            <!-- Materi 4 -->
+            <article class="material-card">
+                <h3>📥 D. Input Output Program (printf, scanf, fgets)</h3>
+                <p>
+                    Program menerima masukan pengguna dengan <code>scanf()</code> dan menampilkan hasil dengan
+                    <code>printf()</code>.
+                </p>
+
+                <div class="code-box">
+                    <div class="code-header">
+                        <span>Input Output Angka (scanf)</span>
+                    </div>
+                    <pre><code><span class="keyword">#include</span> &lt;stdio.h&gt;
+
+<span class="keyword">int</span> <span class="func">main</span>() {
+    <span class="keyword">int</span> bilangan; <span class="comment">// Deklarasi variabel</span>
+    
+    <span class="func">printf</span>(<span class="string">"Masukkan angka: "</span>);
+    <span class="func">scanf</span>(<span class="string">"%d"</span>, &amp;bilangan); <span class="comment">// &amp; = Ampersand untuk memasukkan nilai ke memori</span>
+    
+    <span class="func">printf</span>(<span class="string">"Hasil Output: %d\n"</span>, bilangan);
+    <span class="keyword">return</span> 0;
+}</code></pre>
+                </div>
+
+                <div class="info-box">
+                    <h4>💡 Membaca Teks Ber-spasi (fgets):</h4>
+                    <p>
+                        Fungsi <code>scanf("%s", ...)</code> hanya membaca kata pertama sebelum spasi. Untuk membaca
+                        teks yang mengandung spasi (kalimat), disarankan menggunakan <code>fgets()</code> agar lebih
+                        aman dari buffer overflow:
+                    </p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Input Teks Ber-spasi (fgets)</span>
+                        </div>
+                        <pre><code><span class="keyword">char</span> kalimat[50];
+<span class="func">printf</span>(<span class="string">"Masukkan nama lengkap: "</span>);
+<span class="func">fgets</span>(kalimat, <span class="keyword">sizeof</span>(kalimat), stdin);
+<span class="func">printf</span>(<span class="string">"Halo, %s"</span>, kalimat);</code></pre>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- pemisah bab 6 ke 7-->
+        <div class="chapter-divider">
+            <span class="divider-badge">🎯 Checkpoint 2: Bab 06 Selesai!</span>
+        </div>
+
+       <!-- bab 7 -->
+        <section id="chapter-07" class="chapter-block ch-7">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 07</span>
+                    <h2>Operator dalam Bahasa C</h2>
+                </div>
+                <div class="chapter-number-big">07</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>➗ Mission Brief</h3>
+                <p>
+                    Operator adalah karakter atau simbol khusus yang digunakan untuk melakukan operasi matematika,
+                    perbandingan, logika, dan pengisian data dalam Bahasa C.
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>⚖️ A. Operator Precedence (Prioritas Operator)</h3>
+                <p>
+                    <strong>Operator Precedence</strong> adalah tingkatan prioritas mana operator yang dieksekusi
+                    terlebih dahulu oleh sistem (seperti kaidah *kalibatakur* dalam matematika).
+                </p>
+                <div class="info-box">
+                    <h4>Contoh Perhitungan Precedence:</h4>
+                    <p>Dalam ekspresi <code>hasil = 4 + 2 * 3 - 1;</code>, perkalian <code>2 * 3 = 6</code> dieksekusi
+                        lebih dulu, lalu <code>4 + 6 = 10</code>, dan <code>10 - 1 = 9</code>.</p>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>➕ B. Operator Aritmatika</h3>
+                <p>Digunakan untuk melakukan operasi matematika dasar:</p>
+
+                <div class="grid-2-col">
+                    <div class="card-box">
+                        <p><code>+</code> : Penjumlahan (<code>a + b</code>)</p>
+                        <p><code>-</code> : Pengurangan (<code>a - b</code>)</p>
+                        <p><code>*</code> : Perkalian (<code>a * b</code>)</p>
+                    </div>
+                    <div class="card-box">
+                        <p><code>/</code> : Pembagian (<code>a / b</code>)</p>
+                        <p><code>%</code> : Modulus / sisa hasil bagi (<code>a % b</code>)</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>📌 Catatan Penting :</h4>
+                    <ul>
+                        <li>Pembagian dua bilangan bulat (<code>int / int</code>) hasilnya berupa bilangan bulat juga
+                            (pecahan dibuang).</li>
+                        <li>Operator Modulus (<code>%</code>) <strong>hanya bisa digunakan untuk bilangan bulat
+                                (int)</strong>, tidak bisa untuk <code>float</code> atau <code>double</code>.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Materi 3 -->
+            <article class="material-card">
+                <h3>📝 C. Operator Penugasan (Assignment Operator)</h3>
+                <p>Digunakan untuk mengisi atau meng-update nilai suatu variabel:</p>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">=</div><span>Mengisi variabel dengan nilai baru (Contoh:
+                            <code>bilangan = 7;</code>)</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">+=</div><span>Mengisi nilai lama ditambah nilai baru (Contoh:
+                            <code>bilangan += 3;</code>)</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">-=</div><span>Mengisi nilai lama dikurangi nilai baru (Contoh:
+                            <code>bilangan -= 2;</code>)</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">*=</div><span>Mengisi nilai lama dikali nilai baru (Contoh:
+                            <code>bilangan *= 4;</code>)</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">/=</div><span>Mengisi nilai lama dibagi nilai baru (Contoh:
+                            <code>bilangan /= 2;</code>)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 4 -->
+            <article class="material-card">
+                <h3>🔍 D. Operator Perbandingan & Logika</h3>
+                <div class="grid-2-col">
+                    <div class="card-box success">
+                        <h4>Perbandingan (Comparison)</h4>
+                        <p><code>==</code> : Sama dengan</p>
+                        <p><code>!=</code> : Tidak sama dengan</p>
+                        <p><code>&gt;</code> : Lebih dari</p>
+                        <p><code>&lt;</code> : Kurang dari</p>
+                        <p><code>&gt;=</code> : Lebih dari sama dengan</p>
+                        <p><code>&lt;=</code> : Kurang dari sama dengan</p>
+                    </div>
+                    <div class="card-box success">
+                        <h4>Logika (Logical)</h4>
+                        <p><code>&amp;&amp;</code> (AND) : True jika <strong>semua</strong> syarat benar.</p>
+                        <p><code>||</code> (OR) : True jika <strong>salah satu</strong> syarat benar.</p>
+                        <p><code>!</code> (NOT) : Menandakan negasi / kebalikan.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>⚠️ Bedakan:</h4>
+                    <p>Penugasan menggunakan <code>=</code> (satu tanda), sedangkan perbandingan menggunakan
+                        <code>==</code> (dua tanda sama dengan).
+                    </p>
+                </div>
+            </article>
+
+            <!-- Materi 5-->
+            <article class="material-card">
+                <h3>➕ E. Operator Tunggal (Unary Operator)</h3>
+                <p>Operator yang hanya bekerja pada satu nilai/variabel saja:</p>
+                <ul>
+                    <li><code>++</code> (Increment): Menambah 1 nilai pada variabel (Contoh: <code>i++</code> atau
+                        <code>++i</code>).
+                    </li>
+                    <li><code>--</code> (Decrement): Mengurangi 1 nilai pada variabel (Contoh: <code>i--</code> atau
+                        <code>--i</code>).
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- pemisah bab 7 ke 8-->
+        <div class="chapter-divider">
+            <span class="divider-badge">💻 Checkpoint 3: Bab 07 Selesai!</span>
+        </div>
+
+       <!-- bab 8 -->
+        <section id="chapter-08" class="chapter-block ch-8">
+            <div class="chapter-header">
+                <div class="chapter-title-box">
+                    <span class="chapter-badge">• Chapter 08 </span>
+                    <h2>Percabangan (Decision)</h2>
+                </div>
+                <div class="chapter-number-big">08</div>
+            </div>
+
+            <div class="mission-box">
+                <h3>🔀 Mission Brief</h3>
+                <p>
+                    Percabangan (decision) adalah instruksi dalam Bahasa C yang digunakan untuk menentukan kelompok
+                    perintah mana yang akan dijalankan berdasarkan hasil evaluasi kondisi (True / False).
+                </p>
+            </div>
+
+            <!-- Materi 1 -->
+            <article class="material-card">
+                <h3>⚖️ A. Aturan Pembuatan Kondisi</h3>
+                <p>Kondisi akan bernilai <code>True</code> (1) atau <code>False</code> (0). Contoh penulisan kondisi:
+                </p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div><span>Mengecek angka nol: <code>(angka == 0)</code></span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div><span>Positif / Negatif: <code>(angka &gt; 0)</code> atau
+                            <code>(angka &lt; 0)</code></span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div><span>Genap / Ganjil: <code>(angka % 2 == 0)</code> atau
+                            <code>(angka % 2 != 0)</code></span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div><span>Memeriksa String:
+                            <code>(strcmp(input_nama, "PUB") == 0)</code></span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div><span>Lebih dari 1 syarat:
+                            <code>(angka &gt; 0 &amp;&amp; angka % 2 == 0)</code></span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 2 -->
+            <article class="material-card">
+                <h3>🌿 B. Jenis-Jenis Perintah Percabangan</h3>
+
+                <!-- 1. Struktur IF -->
+                <div class="info-box">
+                    <h4>1. Struktur if, else if, dan else</h4>
+                    <p>Pilihan cabang bertingkat berdasarkan kondisi:</p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh if - else if - else</span>
+                        </div>
+                        <pre><code><span class="keyword">if</span> (bilangan &gt; 0) {
+    <span class="func">printf</span>(<span class="string">"Bilangan Positif\n"</span>);
+} <span class="keyword">else if</span> (bilangan &lt; 0) {
+    <span class="func">printf</span>(<span class="string">"Bilangan Negatif\n"</span>);
+} <span class="keyword">else</span> {
+    <span class="func">printf</span>(<span class="string">"Angka Nol\n"</span>);
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- 2. Struktur SWITCH-CASE -->
+                <div class="info-box">
+                    <h4>2. Struktur switch-case</h4>
+                    <p>Digunakan untuk memilih dari nilai-nilai konstan (tetap/pasti) bertipe integer atau char.</p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh switch-case (Hari)</span>
+                        </div>
+                        <pre><code><span class="keyword">switch</span>(nomor) {
+    <span class="keyword">case</span> 1:
+        <span class="func">printf</span>(<span class="string">"Hari Senin\n"</span>);
+        <span class="keyword">break</span>; <span class="comment">// Menghentikan agar tidak lanjut ke case bawah</span>
+    <span class="keyword">case</span> 2:
+        <span class="func">printf</span>(<span class="string">"Hari Selasa\n"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        <span class="func">printf</span>(<span class="string">"Nomor Invalid\n"</span>);
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- 3. Operator Ternary -->
+                <div class="info-box">
+                    <h4>3. Operator Ternary (Percabangan 1 Baris)</h4>
+                    <p>Penulisan ringkas dengan sintaks: <code>kondisi ? perintah_true : perintah_false;</code></p>
+                    <div class="code-box">
+                        <div class="code-header">
+                            <span>Contoh Ternary</span>
+                        </div>
+                        <pre><code>bilangan % 2 == 0 ? <span class="func">printf</span>(<span class="string">"Genap"</span>) : <span class="func">printf</span>(<span class="string">"Ganjil"</span>);</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Materi 3  -->
+            <article class="material-card">
+                <h3>🪆 C. Percabangan Bersarang (Nested Decision)</h3>
+                <p>
+                    Percabangan bersarang adalah struktur percabangan yang memiliki percabangan lain di dalam blok
+                    kodenya.
+                </p>
+            </article>
+        </section>
+
+        <!-- banner Selesai -->
+        <section class="complete-box">
+            <h2>🎉 Selamat! Fase 2 Selesai!</h2>
+            <p>Kamu telah berhasil menguasai 4 bab lengkap pada Fase 2 (Bab 05, 06, 07, dan 08).</p>
+
+            <div class="complete-btns">
+                <a href="../quiz.html" class="btn-complete quiz">📝 Ikuti Kuis</a>
+                <a href="../materi.html" class="btn-complete back">📚 Kembali ke Daftar Bab</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 silva PUB's 24. Learn C Programming.</p>
+    </footer>
+
+
+</body>
+
+</html>
